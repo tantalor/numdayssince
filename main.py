@@ -30,7 +30,10 @@ class MainHandler(webapp.RequestHandler):
             raise ValueError()
         except ValueError:
           days_ago_numeric = 0
-      last_occured = date.today() - timedelta(days_ago_numeric)
+      try:
+        last_occured = date.today() - timedelta(days_ago_numeric)
+      except OverflowError:
+        last_occured = date.today()
       event = Event(
         description = description,
         last_occured = last_occured
