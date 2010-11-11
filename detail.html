@@ -5,6 +5,6 @@
 </head>
 <body>
   <p class="day-ago">{{event.days_ago}} since {{event.description}}</p>
-  <p class="reset"><a href="/{{event.key}}/reset">reset</a></p>
+  <p class="reset"><form action="/{{event.key}}/reset" method="post"><input type="submit" value="Reset"></form></p>
 </body>
 </html>

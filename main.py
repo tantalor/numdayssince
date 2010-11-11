@@ -46,7 +46,7 @@ class DetailHandler(webapp.RequestHandler):
     self.response.out.write(template.render('detail.html', dict(event=event)))
 
 class ResetHandler(webapp.RequestHandler):
-  def get(self, key):
+  def post(self, key):
     event = Event.get(key)
     event.last_occured = date.today()
     event.put()
