@@ -2,14 +2,40 @@
 <html>
 <head>
   <title>Days Since</title>
+  <style type="text/css" media="screen">
+    body, input {
+      font-family: Arial;
+    }
+    
+    form {
+      width: 20em;
+      margin: 10em auto;
+    }
+    
+    form input.text {
+      border-width: 0 0 1px 0;
+      border-style: solid black;
+      outline: none;
+      font-size: 1em;
+    }
+    
+    #days_ago {
+      width: 2em;
+      text-align: right;
+    }
+    
+    #description {
+      width: 8em;
+    }
+  </style>
 </head>
 <body>
   <a href="http://github.com/tantalor/numdayssince"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
   <form action="" method="post">
-    <input type="text" name="days_ago" value="0" id="days_ago">
+    <input type="text" name="days_ago" value="0" id="days_ago" class="text">
     days since
-    <input type="text" name="description" value="(your thing)" id="description">
-    <input type="submit">
+    <input type="text" name="description" value="(your thing)" id="description" class="text">
+    <input type="submit" id="submit">
   </form>
 </body>
 </html>

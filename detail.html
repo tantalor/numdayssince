@@ -2,9 +2,21 @@
 <html>
 <head>
   <title>Days Since > {{event.description}}</title>
+  <style type="text/css" media="screen">
+    body {
+      font-family: Arial;
+    }
+    
+    form {
+      width: 20em;
+      margin: 10em auto;
+    }
+  </style>
 </head>
 <body>
-  <p class="day-ago">{{event.days_ago}} since {{event.description}}</p>
-  <p class="reset"><form action="/{{event.key}}/reset" method="post"><input type="submit" value="Reset"></form></p>
+  <form action="/{{event.key}}/reset" method="post">  
+    <span>{{event.days_ago}} since {{event.description}}</span>
+    <input type="submit" value="Reset">
+  </form>
 </body>
 </html>
